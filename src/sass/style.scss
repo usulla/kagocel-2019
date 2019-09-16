@@ -1,0 +1,122 @@
+// Fonts
+@import "fonts.scss";
+// Core
+@import "variables.scss";
+@import "mixins.scss";
+// example
+@media (max-width: $mobile_p) {
+}
+
+@media (min-width: $mobile_p+1) and (max-width: $mobile_l) {
+}
+
+@media (min-width: $mobile_l+1) and (max-width: $tablets) {
+}
+
+@media (min-width: $tablets+1) and (max-width: $desctops_s) {
+}
+
+@media (min-width: $desctops_s) {
+}
+
+html {
+    background: #fff;
+    box-sizing: border-box;
+    font-size: 15px;
+    @media (max-width: $mobile_p) {
+        font-size: 15px;
+    }
+    @media (min-width: $mobile_p+1) and (max-width: $mobile_l) {
+        font-size: 14px;
+    }
+    @media (min-width: $mobile_l+1) and (max-width: $tablets) {
+        font-size: 14px;
+    }
+    @media (min-width: $tablets+1) and (max-width: $desctops_s) {
+        font-size: 14px;
+    }
+    @media (min-width: $desctops_s+1) and (max-width: $desctops_l) {
+        font-size: 16px;
+    }
+    @media (min-width: $desctops_l+1) {
+        font-size: 16px;
+    }
+}
+html {
+    box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: $black;
+    font-size: 0.6rem;
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: $black;
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: $black;
+}
+button:active,
+button:focus {
+    outline: none;
+}
+button::-moz-focus-inner {
+    border: 0;
+}
+:focus {
+    outline-style: none !important;
+    outline-width: 0px !important;
+    outline-color: none !important;
+}
+:active {
+    outline-style: none !important;
+    outline-width: 0px !important;
+    outline-color: none !important;
+}
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
+    font-family: $font_family;
+    font-weight: $font_weight_normal;
+    min-height: 100vh;
+    text-align: left;
+}
+#root {
+    height: 100%;
+}
+ul {
+    padding: 0;
+}
+li {
+    list-style-type: none;
+}
+h2 {
+    font-family: $font_family;
+    @media (max-width: $mobile_l+1) {
+        font-size: 1.9rem !important;
+    }
+}
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+}
+.animate-hidden {
+    display: block;
+    overflow: hidden;
+}

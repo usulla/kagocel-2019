@@ -1,0 +1,58 @@
+@import "../sass/variables.scss";
+@import "../sass/mixins.scss";
+
+.main{
+    background-size: cover;
+    min-height: 100vh;
+}
+.content{
+    height: 100%;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    .center-block{
+        padding: 70px 0;
+        display: inline-block;
+        max-width:639px;
+        .title{
+            width:100%;
+        }
+        .description{
+            background: linear-gradient(180deg, #EDF0F3 0%, #FCFDFD 100%);
+            box-shadow: 0px 0px 30px #A55016;
+            border-radius: 15px;
+            font-size: 1rem;
+            line-height: 1.4;
+            text-align: center;
+            padding: 25px 20px;
+            font-weight:300;
+            margin-top: 10px;
+
+            span{
+                text-transform:uppercase;
+            }
+        }
+    }
+}
+.stores{
+    display: flex;
+    justify-content: center;
+.store{
+    background-size: cover;
+    display: inline-block;
+    &.google-play{
+        width: 115px;
+        height:34px;
+        margin-right: 10px;
+    }
+    &.app-store{
+        width: 102px;
+        height:34px;
+    }
+}
+}
+.menu{
+background: linear-gradient(180deg, #EDF0F3 0%, #FCFDFD 100%);
+box-shadow: 0px 0px 30px #A55016;
+height:70px;
+}
