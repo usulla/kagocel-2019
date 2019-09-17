@@ -4,9 +4,7 @@ import logo_soyuz from "../images/logo_soyuz.png";
 import logo from "../images/logo.png";
 import bg1 from "../images/bg3.png";
 import bg2 from "../images/bg2.png";
-import bg2_mob from "../images/bg2_mob.png";
-import google_play from "../images/google_play.png";
-import app_store from "../images/app_store.png";
+import bg2_mob from "../images/bg2_mob.jpg";
 import btn_start from "../images/btn_start.png";
 import plus16 from "../images/16plus.png";
 import warning from "../images/warning.jpg";
@@ -22,28 +20,29 @@ import fig9 from "../images/fig9.png";
 import fig10 from "../images/fig10.png";
 import fig11 from "../images/fig11.png";
 import style from "./App.scss";
+import Stores from "./SocButtons.jsx";
 
-var storeGoogleStyle = {
-    backgroundImage: `url(${google_play})`
-};
 var btnStyle = {
-    backgroundImage: `url(${btn_start})`
+    backgroundImage: `url(${ btn_start })`
 };
-var storeAppleStyle = {
-    backgroundImage: `url(${app_store})`
-};
+
 class App extends React.Component {
     constructor() {
         super();
         this.state = {
-            isMobile: false
+            isMobile: false,
+            hover_googleBtn: false,
+            hover_appleBtn: false
         };
     }
+
     componentDidMount() {
         window.addEventListener("resize", this.resize.bind(this));
-        var pageHeight = document.querySelector(".footer").offsetTop;
-        document.querySelector(".letu").style.height = `${pageHeight}px`;
-        console.log(pageHeight);
+        setTimeout(() => {
+            var pageHeight = document.querySelector(".main").offsetHeight;
+            document.querySelector(".letu").style.height = `${pageHeight}px`;
+            console.log(pageHeight);
+        }, 700);
     }
     componentWillMount() {
         this.resize();
@@ -76,18 +75,7 @@ class App extends React.Component {
                 </div>
             );
         };
-        const Stores = () => {
-            return (
-                <div className="stores">
-                    <div className="store google-play" style={storeGoogleStyle}>
-                        <a href="" target="_blank"></a>
-                    </div>
-                    <div className="store app-store" style={storeAppleStyle}>
-                        <a href="" target="_blank"></a>
-                    </div>
-                </div>
-            );
-        };
+
         const Footer = () => {
             return (
                 <div className="footer">
@@ -160,14 +148,17 @@ class App extends React.Component {
             );
         };
         return (
-            <div className="main" style={{ backgroundImage: `url(${bg1})` }}>
+            <div
+                className="main"
+                style={
+                    this.state.isMobile
+                        ? { backgroundImage: `url(${bg2_mob})` }
+                        : { backgroundImage: `url(${bg1})` }
+                }
+            >
                 <div
                     className="letu"
-                    style={
-                        this.state.isMobile
-                            ? { backgroundImage: `url(${bg2_mob})` }
-                            : { backgroundImage: `url(${bg2})` }
-                    }
+                    style={{ backgroundImage: `url(${bg2})` }}
                 ></div>
                 <Menu />
                 <div className="content">
@@ -186,9 +177,10 @@ class App extends React.Component {
                                 <br />И выиграй{" "}
                                 <b>годовую подписку на PREMIER!</b>
                             </span>
-                            <br />
-                            Позаботься о своем здоровье и хорошем настроении с
-                            Кагоцелом!
+                            <p>
+                                Позаботься о своем здоровье и хорошем настроении
+                                с Кагоцелом!
+                            </p>
                         </div>
                         <Button />
                         <Stores />

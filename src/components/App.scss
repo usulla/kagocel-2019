@@ -23,6 +23,9 @@
         .fig {
             z-index: 7;
             position: absolute;
+            @media (max-width: $mobile_l+1) {
+                display: none;
+            }
         }
         .fig10 {
             width: 95px;
@@ -55,6 +58,9 @@
             .fig {
                 z-index: 7;
                 position: absolute;
+                @media (max-width: $mobile_l+1) {
+                    display: none;
+                }
             }
             .fig9 {
                 width: 35px;
@@ -101,11 +107,6 @@
         color: #fff;
         text-decoration: none;
     }
-    @media (max-width: $mobile_l+1) {
-        font-size: 1.2rem;
-        width: 285px;
-        height: 115px;
-    }
 }
 .stores {
     display: flex;
@@ -140,6 +141,10 @@
     .kagocel-img {
         max-width: 161px;
         margin-right: 60px;
+        @media (max-width: $mobile_l+1) {
+            margin-right: 50px;
+            max-width: 150px;
+        }
     }
     .souz-img {
         max-width: 81px;
@@ -209,6 +214,9 @@
     .fig {
         z-index: 7;
         position: absolute;
+        @media (max-width: $mobile_l+1) {
+            display: none;
+        }
     }
     .fig1 {
         width: 69px;
@@ -236,10 +244,10 @@
     top: -130px;
     left: 30%;
     @media (max-width: $mobile_l+1) {
-        width: 350px;
+        width: 85vw;
         position: absolute;
-        top: -180px;
-        left: 7%;
+        top: -44vw;
+        left: 7vw;
     }
 }
 .footer {
@@ -249,7 +257,9 @@
     background: #fff;
     height: 143px;
     .footer_content {
+        @media (min-width: $mobile_l) {
         width: 375px;
+        }
         margin: 0 auto;
         .text1 {
             width: 281px;
@@ -267,6 +277,9 @@
             width: 29px;
         }
     }
+    @media (max-width: $mobile_l+1) {
+    padding: 10px;
+    }
 }
 .letu {
     width: 100vw;
@@ -280,6 +293,6 @@
     z-index: 5;
     background-position: top center;
     @media (max-width: $mobile_l+1) {
-        background-size: cover;
+        display: none;
     }
 }

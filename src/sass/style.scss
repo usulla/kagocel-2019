@@ -20,6 +20,8 @@
 }
 
 html {
+    overflow-x: hidden;
+    width: 100vw;
     background: #fff;
     box-sizing: border-box;
     font-size: 15px;
@@ -88,6 +90,8 @@ button::-moz-focus-inner {
     outline-color: none !important;
 }
 body {
+    overflow-x: hidden;
+    width: 100vw;
     margin: 0;
     padding: 0;
     line-height: 1.2;
