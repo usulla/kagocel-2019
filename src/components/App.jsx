@@ -5,7 +5,9 @@ import logo from "../images/logo.png";
 import bg1 from "../images/bg3.png";
 import bg2 from "../images/bg2.png";
 import bg2_mob from "../images/bg2_mob.jpg";
-import btn_start from "../images/btn_start.png";
+import btn_start from "../images/btn_start_3.png";
+import arrow_left from "../images/arrow-left.png";
+import arrow_right from "../images/arrow-right.png";
 import plus16 from "../images/16plus.png";
 import warning from "../images/warning.jpg";
 import competition from "../images/competition.png";
@@ -68,10 +70,14 @@ class App extends React.Component {
         };
         const Button = () => {
             return (
-                <div className="button" style={btnStyle}>
-                    <a href="" target="_blank">
+                <div classNme="button_outer">
+                    <a href="" target="_blank" className="button" style={{btnStyle}}>
                         Участвовать
+                        <div className="button_hidden">
+                        <div className="button_hover"></div>
+                        </div>
                     </a>
+                    
                 </div>
             );
         };

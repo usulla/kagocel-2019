@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.3e4c2aaa.chunk.css",
+    "main.js": "/static/js/main.7ed8abc8.chunk.js",
+    "main.js.map": "/static/js/main.7ed8abc8.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+    "static/js/2.aa39fa16.chunk.js": "/static/js/2.aa39fa16.chunk.js",
+    "static/js/2.aa39fa16.chunk.js.map": "/static/js/2.aa39fa16.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.762c16cb25a20dc3fc2840dd40a514fb.js": "/precache-manifest.762c16cb25a20dc3fc2840dd40a514fb.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.3e4c2aaa.chunk.css.map": "/static/css/main.3e4c2aaa.chunk.css.map",
+    "static/media/bg2.png": "/static/media/bg2.a1376975.png",
+    "static/media/bg2_mob.jpg": "/static/media/bg2_mob.8e5cc088.jpg",
+    "static/media/bg3.png": "/static/media/bg3.4ad6fd28.png",
+    "static/media/App.scss": "/static/media/btn_start_3.a117ad26.png",
+    "static/media/competition.png": "/static/media/competition.baa78aeb.png",
+    "static/media/fig10.png": "/static/media/fig10.cd281e19.png",
+    "static/media/fig11.png": "/static/media/fig11.a1afc800.png",
+    "static/media/fig2.png": "/static/media/fig2.2f011720.png",
+    "static/media/fig5.png": "/static/media/fig5.4a317b50.png",
+    "static/media/fig8.png": "/static/media/fig8.b6b0e8ad.png",
+    "static/media/kagocel_logo.png": "/static/media/kagocel_logo.5f494bb5.png",
+    "static/media/logo.png": "/static/media/logo.f821a0f9.png",
+    "static/media/logo_soyuz.png": "/static/media/logo_soyuz.001ac8b8.png",
+    "static/media/warning.jpg": "/static/media/warning.e2db3b6a.jpg"
+  }
+}
