@@ -8,6 +8,27 @@
     display: inline-block;
     width: 100%;
 }
+
+.fig10 {
+    width: 95px;
+    right: calc(50% - 345px);
+    top: 26px;
+    z-index: 11;
+    position: absolute;
+    @media (max-width: $mobile_l+1) {
+        display: none;
+    }
+}
+.fig11 {
+    width: 80px;
+    left: calc(50% - 332px);
+    top: 32px;
+    z-index: 11;
+    position: absolute;
+    @media (max-width: $mobile_l+1) {
+        display: none;
+    }
+}
 .content {
     z-index: 6;
     position: relative;
@@ -17,26 +38,9 @@
     justify-content: center;
     .center-block {
         position: relative;
-        padding: 70px 0;
+        padding: 140px 0 70px;
         display: inline-block;
         max-width: 639px;
-        .fig {
-            z-index: 7;
-            position: absolute;
-            @media (max-width: $mobile_l+1) {
-                display: none;
-            }
-        }
-        .fig10 {
-            width: 95px;
-            right: -42px;
-            top: -44px;
-        }
-        .fig11 {
-            width: 80px;
-            left: -30px;
-            top: -40px;
-        }
         .title {
             width: 100%;
         }
@@ -48,9 +52,15 @@
             font-size: 1rem;
             line-height: 1.4;
             text-align: center;
-            padding: 25px 20px;
+            padding: 25px 20px 5px;
             font-weight: 300;
             margin-top: 10px;
+            p{
+                margin-top: 0;
+                @media (max-width: $mobile_l+1) {
+                    margin-top: 15px;  
+                }
+            }
 
             span {
                 text-transform: uppercase;
@@ -84,7 +94,7 @@
         }
         @media (max-width: $mobile_l+1) {
             width: 85%;
-            padding: 40px 0;
+            padding: 100px 0;
         }
     }
 }
@@ -94,7 +104,6 @@
     height: 50px;
     display: flex;
     align-items: center;
-    // justify-content: center;
     background-position: center center;
     font-size: 1rem;
     line-height: 19px;
@@ -111,77 +120,87 @@
     &:hover{
         cursor:pointer;
     }
-    .button_hover{
-        top:0;
-        position: absolute!important;
-        width: 193px;
-        height: 50px;
-        left: 26px;
-        display: block;
-        background: #fff;
+    &.button_text{
         position: relative;
-        &:before  {
-            content: '';
-            position: absolute;
-            left: -20px;
-            bottom: 0;
-            border: 25px solid #fff;
-            border-left: 15px solid transparent;
-    }
-        &:after {
-                content: ''; 
-                position: absolute; 
-                right: -40px; 
-                bottom: 0px; 
-                border: 25px solid transparent;
-                border-left: 15px solid #fff;
-        }
-    }
-    &:hover .button_hover{
-        display: block;
-        background: #fff;
-        padding: 20px;
-        position: relative;
-        &:before  {
-            content: ''; 
-            position: absolute; 
-            left: 20px;
-            bottom: 0px; 
-            border: 25px solid #fff;
-            border-right: 15px solid transparent;
-    }
-        &:after {
-                content: ''; 
-                position: absolute; 
-                left: 20px;
-                bottom: 0px; 
-                border: 25px solid transparent;
-                border-left: 15px solid #fff;
-        }
-    }
-    &:before{
-        content:'';
-        position:absolute;
-        top:0;
-        left:0;
-        width: 24px;
-        height:50px;
-        background: url(../images/arrow-left.png);
-        background-size:cover;
-        background-repeat: no-repeat;
         z-index: 2;
     }
+    .button_hover{ 
+    top: 0;
+    position: absolute !important;
+    z-index: 1;
+    width: 100%;
+    height: 50px;
+    left: 0;
+    display: block;
+    background: #fff;
+    clip-path:polygon(0 0, 10px 0, 24px 50%, 10px 100%, 0 100%, 14px 50%);
+    transition: clip-path .8s;
+    //     &:before  {
+    //         content: '';
+    //         position: absolute;
+    //         left: -20px;
+    //         bottom: 0;
+    //         border: 25px solid #fff;
+    //         border-left: 15px solid transparent;
+    // }
+    //     &:after {
+    //             content: ''; 
+    //             position: absolute; 
+    //             right: -40px; 
+    //             bottom: 0px; 
+    //             border: 25px solid transparent;
+    //             border-left: 15px solid #fff;
+    //     }
+    }
+    .button_text{
+        transition: color .6s;
+        z-index: 2;
+        position: absolute;
+        width: 160px;
+        left: 45px;
+    }
+    .button_text-hover{
+        opacity: 0;
+        width:0;
+        transition: width .8s ease;
+        transition-delay:0.1s;
+    }
+    .button_text-active{
+        // transition: width 1s ease;
+        // transition-delay:0.1s;
+        opacity: 1;
+        overflow: hidden;
+    }
+    &:hover .button_hover {
+        display: block;
+        position: relative;
+        background: #fff;
+        clip-path:
+        polygon(0 0, 227px 0, 241px 50%, 227px 100%, 0 100%, 14px 50%);
+    }
+    &:hover .button_text-active{
+       opacity: 0;
+       width:0;
+    }
+    &:hover .button_text-hover{
+        opacity: 1;
+        background: linear-gradient(#F48124, #EF3742);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        width: 160px;
+    }
+
     &:after{
         content:'';
         position:absolute;
         top:0;
         right:0;
-        width: 23px;
-        height:50px;
-        background: url(../images/arrow-right.png);
-        background-size:cover;
-        background-repeat: no-repeat;
+        width: 24px;
         z-index: 2;
+        height: 50px;
+        display: block;
+        background: #fff;
+        clip-path:polygon(0 0, 10px 0, 24px 50%, 10px 100%, 0 100%, 14px 50%);
     }
 
 }
@@ -205,9 +224,34 @@
         }
     }
 }
-.menu {
-    z-index: 6;
+.arrow_down{
+    clip-path: polygon(0 0, 9px 0, 22px 50%, 9px 100%, 0 100%, 13px 50%);
+    height: 38px;
+    display: block;
+    background: #FF9C00;
+    width: 22px;
+    transform: rotate(90deg);
+    margin: 0 auto;
+    display: inline-block;
     position: relative;
+
+    &:hover{
+        cursor: pointer;
+    }
+    @include animation(up_down 2s infinite ease forwards);
+}
+  
+    
+    @keyframes up_down {
+    0% { top:0 }
+    50% { top: 4px; }
+    100% { top: 0; }
+    }
+
+.menu {
+    position: fixed;
+    width: 100vw;
+    z-index: 9;
     display: flex;
     justify-content: center;
     align-items: center;

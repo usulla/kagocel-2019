@@ -34,10 +34,17 @@ class App extends React.Component {
         this.state = {
             isMobile: false,
             hover_googleBtn: false,
-            hover_appleBtn: false
+            hover_appleBtn: false,
         };
+        this.handleClick = this.handleClick.bind(this);
     }
-
+    handleClick(){
+        window.scroll({
+        top: 2400, 
+        left: 0, 
+        behavior: 'smooth'
+});
+    }
     componentDidMount() {
         window.addEventListener("resize", this.resize.bind(this));
         setTimeout(() => {
@@ -72,9 +79,9 @@ class App extends React.Component {
             return (
                 <div classNme="button_outer">
                     <a href="" target="_blank" className="button" style={{btnStyle}}>
-                        Участвовать
-                        <div className="button_hidden">
-                        <div className="button_hover"></div>
+                        <span className="button_text button_text-active">Участвовать</span>
+                        <span className="button_text button_text-hover">Участвовать</span>
+                        <div className="button_hover">
                         </div>
                     </a>
                     
@@ -167,10 +174,10 @@ class App extends React.Component {
                     style={{ backgroundImage: `url(${bg2})` }}
                 ></div>
                 <Menu />
+                <img className="fig fig10" src={fig10} />
+                <img className="fig fig11" src={fig11} />
                 <div className="content">
                     <div className="center-block">
-                        <img className="fig fig10" src={fig10} />
-                        <img className="fig fig11" src={fig11} />
                         <img className="title" src={logo} />
                         <div className="description">
                             <img className="fig fig5" src={fig5} />
@@ -180,13 +187,14 @@ class App extends React.Component {
                             <span>
                                 Проверь свои силы в караоке-игре «Вы орете
                                 великолепно!»
-                                <br />И выиграй{" "}
+                                <br />И выиграй
                                 <b>годовую подписку на PREMIER!</b>
                             </span>
-                            <p>
+                            <p style={{marginBottom: '5px'}}>
                                 Позаботься о своем здоровье и хорошем настроении
                                 с Кагоцелом!
                             </p>
+                            <div className="arrow_down" onClick={this.handleClick}></div>
                         </div>
                         <Button />
                         <Stores />
