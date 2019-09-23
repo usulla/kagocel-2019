@@ -39,8 +39,10 @@ class App extends React.Component {
         this.handleClick = this.handleClick.bind(this);
     }
     handleClick(){
+        var competitonTop = document.querySelector('.competition').offsetTop-180;
+        console.log(competitonTop, 'ff');
         window.scroll({
-        top: 2400, 
+        top: competitonTop, 
         left: 0, 
         behavior: 'smooth'
 });
@@ -66,7 +68,7 @@ class App extends React.Component {
         const Menu = () => {
             return (
                 <div className="menu">
-                    <a href="" target="_blank">
+                    <a href="https://www.kagocel.ru/about_drug/" target="_blank">
                         <img className="kagocel-img" src={logo_kagocel} />
                     </a>
                     <a href="" target="_blank">
@@ -77,8 +79,8 @@ class App extends React.Component {
         };
         const Button = () => {
             return (
-                <div classNme="button_outer">
-                    <a href="" target="_blank" className="button" style={{btnStyle}}>
+                <div className="button_outer">
+                    <a href="//tnt-club.com" target="_blank" className="button" style={{btnStyle}}>
                         <span className="button_text button_text-active">Участвовать</span>
                         <span className="button_text button_text-hover">Участвовать</span>
                         <div className="button_hover">
@@ -188,7 +190,7 @@ class App extends React.Component {
                                 Проверь свои силы в караоке-игре «Вы орете
                                 великолепно!»
                                 <br />И выиграй
-                                <b>годовую подписку на PREMIER!</b>
+                                <b> годовую подписку на PREMIER!</b>
                             </span>
                             <p style={{marginBottom: '5px'}}>
                                 Позаботься о своем здоровье и хорошем настроении

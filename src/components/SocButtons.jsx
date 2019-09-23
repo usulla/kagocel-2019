@@ -43,22 +43,20 @@ class Stores extends React.Component {
         }
         return (
             <div className="stores">
-                <div
+                <a href="https://play.google.com/store/apps/details?id=com.finchmil.thtclub" target="_blank"
                     className="store google-play"
                     style={storeGoogleStyle}
                     onMouseEnter={this.toggleHoverGoogle}
                     onMouseLeave={this.toggleHoverGoogle}
                 >
-                    <a href="" target="_blank"></a>
-                </div>
-                <div
+                </a>
+                <a href="https://itunes.apple.com/ru/app/tnt-club/id911345730?mt=8" target="_blank"
                     className="store app-store"
                     style={storeAppleStyle}
                     onMouseEnter={this.toggleHoverApple}
                     onMouseLeave={this.toggleHoverApple}
                 >
-                    <a href="" target="_blank"></a>
-                </div>
+                </a>
             </div>
         );
     }

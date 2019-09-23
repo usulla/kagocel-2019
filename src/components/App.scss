@@ -7,6 +7,9 @@
     min-height: 100vh;
     display: inline-block;
     width: 100%;
+    @media (max-width: $mobile_l+1) {
+        background-position: center -65px;
+    }
 }
 
 .fig10 {
