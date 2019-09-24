@@ -2,13 +2,15 @@
 @import "../sass/mixins.scss";
 
 .main {
-    background-size: cover;
-    background-position: top center;
     min-height: 100vh;
     display: inline-block;
     width: 100%;
+    background-size: contain;
+    background-position: top left;
+    background-repeat: repeat;
     @media (max-width: $mobile_l+1) {
         background-position: center -65px;
+        background-size: cover;
     }
 }
 
@@ -413,7 +415,7 @@
     position: absolute;
     top: 10px;
     left: 0;
-    background-size: 1980px;
+    background-size: 2150px;
     background-repeat: no-repeat;
     z-index: 5;
     background-position: top center;

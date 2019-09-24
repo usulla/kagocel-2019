@@ -168,7 +168,7 @@ class App extends React.Component {
                 style={
                     this.state.isMobile
                         ? { backgroundImage: `url(${bg2_mob})` }
-                        : { backgroundImage: `url(${bg1})` }
+                        : { backgroundImage: `url(${bg1}), linear-gradient(180deg, #F08022 0%, #EF3742 100%)` }
                 }
             >
                 <div
